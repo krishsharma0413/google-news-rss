@@ -1,8 +1,10 @@
 import feedparser
 
 topic = input("Enter a topic: ")
-time = input("Enter a time: ")
-url = f"https://news.google.com/rss/search?q={topic}+when:{time}d&hl=en-IN&gl=IN&ceid=IN:en"
+# time = input("Enter a time: ")
+after = input("After time: ")
+before = input("Before time: ")
+url = f"https://news.google.com/rss/search?q={topic}+after:{after}+before:{before}&hl=en-IN&gl=IN&ceid=IN:en"
 
 feed = feedparser.parse(url)
 
